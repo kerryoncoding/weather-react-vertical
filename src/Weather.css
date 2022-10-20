@@ -1,0 +1,120 @@
+.Weather .card {
+    background-color: rgba(253, 201, 152, 0.5);
+    display: block;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.Weather form {
+    padding-top: 10px;
+}
+
+.Weather #celsious,
+.Weather #fahrenheit {
+    text-decoration: none;
+}
+
+
+.Weather ul {
+    list-style: none;
+    padding: 0;
+}
+
+.Weather .current-list {
+    margin-bottom: 0px;
+}
+
+.Weather .icon-current {
+    height: 100px;
+}
+
+.Weather #right-side {
+    text-align: right;
+    padding-top: 20px;
+}
+
+.Weather .current-weather-side {
+    margin: 5px;
+    height: 345px;
+    text-align: center;
+}
+
+.Weather .city-current {
+    font-size: 28px;
+    font-weight: bold;
+    color: #202124;
+    padding-top: 25px;
+}
+
+.Weather .temperature-current {
+    font-size: 48px;
+    color: #202124;
+}
+
+.Weather .units {
+    font-size: 16px;
+    position: relative;
+    bottom: 20px;
+}
+
+.Weather .units .active {
+    font-weight: bold;
+    color: #202124;
+    cursor: default;
+}
+
+.Weather .time-current {
+    padding-bottom: 35px;
+    font-size: 18px;
+    color: #202124;
+}
+
+.Weather .description-current {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #70757A;
+}
+
+.Weather .current-conditions {
+    font-size: 16px;
+
+    padding-top: 20px;
+    color: #70757A;
+}
+
+.Weather .card-future {
+    position: relative;
+    height: 65px;
+    text-align: center;
+    margin: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+.Weather .day-future {
+    position: relative;
+    font-size: 18px;
+    font-weight: bold;
+    top: 20px;
+}
+
+.Weather .icon-future {
+    position: relative;
+    height: 75px;
+}
+
+.Weather .temperature-future {
+    position: relative;
+    font-size: 14px;
+    top: 20px;
+}
+
+.Weather .high-future {
+    font-weight: bold;
+}
+
+.Weather footer {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 10px;
+}

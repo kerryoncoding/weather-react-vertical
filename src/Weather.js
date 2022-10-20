@@ -1,7 +1,9 @@
 import React from "react";
+import "./Weather.css";
 
 export default function Weather(){
     return(
+<div className="Weather">
     <div className="card">
         <div className="row">
             <div className="col">
@@ -20,9 +22,8 @@ export default function Weather(){
             </form>
             </div>
         </div>
-
-<div className="row">
-          <div className="col-6 leftSide">
+    <div className="row">
+        <div className="col-6 leftSide">
             <div className="current-weather-side">
               <ul className="current-list">
                 <li className="city-current">Philadelphia</li>
@@ -80,6 +81,8 @@ export default function Weather(){
 
 
     </div>
+</div>
+
 
     );
 }
