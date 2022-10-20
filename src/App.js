@@ -8,6 +8,12 @@ function App() {
       <div className="container">
         <Weather />
       </div>
+      <footer>
+        <a
+          href="https://github.com/kerryoncoding/weather-react-vertical"
+          target="_blank"
+          >open-source code</a> by kerryoncoding
+      </footer>
     </div>
   );
 }

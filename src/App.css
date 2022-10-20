@@ -6,3 +6,8 @@
   max-width: 600px;
   margin-top: 35px;
 }
+
+.App footer {
+  font-size: 14px;
+  margin-top: 10px;
+}
