@@ -20,9 +20,66 @@ export default function Weather(){
             </form>
             </div>
         </div>
+
+<div className="row">
+          <div className="col-6 leftSide">
+            <div className="current-weather-side">
+              <ul className="current-list">
+                <li className="city-current">Philadelphia</li>
+                <li className="time-current">Sunday 1:22 PM</li>
+                <li className="description-current">Clear Sky</li>
+              </ul>
+              <div className="row">
+                <div className="col left-col">
+                  <img
+                    src="http://openweathermap.org/img/wn/10d@2x.png"
+                    alt="weather-icon"
+                    className="icon-current"
+                  />
+                  <span className="temperature-current">67</span><span className="units"
+                    ><a href="/" id="fahrenheit" className="active">°F</a> |
+                    <a href="/" id="celsious">°C</a></span>
+                </div>
+              </div>
+              <ul className="current-conditions">
+                <li>
+                  Humidity: <span className="humidity-current">62</span>%
+                </li>
+                <li>
+                  Wind: <span className="wind-current">4</span> mph
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="col-6 flex rightSide">
+            <div className="row">
+              <div id="forecast">
+                
+                <div className="row card-future">
+                <div className="col-4 day-future">Wed</div>
+                <div className="col-4">
+                  <img
+                    src="http://openweathermap.org/img/wn/${futureDay.weather[0].icon}@2x.png"
+                    alt="weather-icon"
+                    className="icon-future"
+                  />
+                </div>
+                <div className="col-4 temperature-future">
+                <span className="high-future">56° </span><span className="low-future">| 34°</span>                
+                </div>
+              </div>
+
+
+                
+                </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
     </div>
 
-   
-        
     );
 }
