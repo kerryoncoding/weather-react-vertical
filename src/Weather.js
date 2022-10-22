@@ -4,22 +4,21 @@ import "./Weather.css";
 
 
 export default function Weather(){
-  const [ready, setReady] = useState(false);
-  const [weatherData, setWeatherData] = useState({});
+  const [weatherData, setWeatherData] = useState({ ready: false });
   function handleResponse(response){
     console.log(response.data);
     setWeatherData({
+      ready: true,
       city: response.data.name,
       temperature: response.data.main.temp,
       date: "Friday 7:05pm",
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
       wind: Math.round(response.data.wind.speed)
-    });
-    setReady(true);
+    });    
   }
 
-if (ready) {
+if (weatherData.ready) {
     return(
       <div className="Weather">
           <div className="card">
@@ -104,7 +103,7 @@ if (ready) {
 
 } else {
 
-  let city = "London";
+  let city = "new york";
   const apiKey = "ca47e9200d90350ad07692b8ce034ca3";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
   axios.get(`${apiUrl}`).then(handleResponse);
