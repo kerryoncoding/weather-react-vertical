@@ -17,23 +17,26 @@ export default function Weather(props){
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
       wind: Math.round(response.data.wind.speed)
-    });    
+    }); 
   }
+
+  function search(){
+  const apiKey = "ca47e9200d90350ad07692b8ce034ca3";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+  axios.get(`${apiUrl}`).then(handleResponse);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  search();
+}
+
+function handleCityChange(event) {
+  setCity(event.target.value);
+}
 
 if (weatherData.ready) {
-  function handleSubmit(event) {
-    event.preventDefault();
-    alert(city);
-  }
-
-  function handleCityChange(event) {
-    setCity(event.target.value);
-  }
-
-
-
-
-
+  
     return(
       <div className="Weather">
           <div className="card">
@@ -60,13 +63,9 @@ if (weatherData.ready) {
   );
 
 } else {
-  const apiKey = "ca47e9200d90350ad07692b8ce034ca3";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
-  axios.get(`${apiUrl}`).then(handleResponse);
-
+  search();
   return "Loading..."
 }
 
-
-        
-      }
+     
+}
