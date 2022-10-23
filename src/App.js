@@ -11,7 +11,7 @@ function App() {
       <footer>
         <a
           href="https://github.com/kerryoncoding/weather-react-vertical"
-          target="_blank"
+          target="_blank" rel='noreferrer noopener'
           >open-source code</a> by kerryoncoding
       </footer>
     </div>

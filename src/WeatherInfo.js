@@ -1,4 +1,6 @@
 import React from "react";
+import FormatDate from "./FormatDate";
+import Weather from "./Weather";
 
 export default function WeatherInfo(props) {
     return (
@@ -8,7 +10,7 @@ export default function WeatherInfo(props) {
                   <div className="current-weather-side">
                     <ul className="current-list">
                       <li className="city-current">{props.data.city}</li>
-                      <li className="time-current">{props.data.date}</li>
+                      <li className="time-current"><FormatDate date={props.data.date} /></li>
                       <li className="description-current">{props.data.description}</li>
                     </ul>
                     <div className="row">
