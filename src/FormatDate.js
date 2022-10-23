@@ -24,15 +24,31 @@ export default function FormatDate(props) {
     let timeHour = props.date.getHours();
 
     if (timeHour === 12) {
-        return `${dayOfWeek} ${timeHour}:${timeMinutes} PM`;
+        return(
+            <div>
+                 {dayOfWeek} {timeHour}:{timeMinutes} PM
+            </div>
+        );
     } else { if (timeHour === 0) {
-        return `${dayOfWeek} 12:${timeMinutes} AM`;
+        return (
+            <div>
+                {dayOfWeek} 12:{timeMinutes} AM
+            </div>
+        );
         } else {
         if (timeHour > 12) { 
         timeHour = timeHour - 12;
-        return `${dayOfWeek} ${timeHour}:${timeMinutes} PM`;
+        return (
+            <div>
+                {dayOfWeek} {timeHour}:{timeMinutes} PM
+            </div>
+        ); 
         } else {
-            return `${dayOfWeek} ${timeHour}:${timeMinutes} AM`;
+            return (
+                <div>
+                    {dayOfWeek} {timeHour}:{timeMinutes} AM
+                </div>
+            ); 
         }
         }
     }
