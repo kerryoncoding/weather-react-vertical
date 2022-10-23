@@ -77,7 +77,7 @@ if (weatherData.ready) {
                       <div className="col-4 day-future">Wed</div>
                       <div className="col-4">
                         <img
-                          src="http://openweathermap.org/img/wn/${futureDay.weather[0].icon}@2x.png"
+                          src="http://openweathermap.org/img/wn/10d@2x.png"
                           alt="weather-icon"
                           className="icon-future"
                         />
