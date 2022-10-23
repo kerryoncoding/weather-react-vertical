@@ -6,6 +6,7 @@ import "./Weather.css";
 
 export default function Weather(props){
   const [weatherData, setweatherData] = useState({ready:false });
+  const [city, setCity] = useState(props.defaultCity);
   function handleResponse(response){
     console.log(response.data);
     setweatherData({
@@ -20,17 +21,30 @@ export default function Weather(props){
   }
 
 if (weatherData.ready) {
+  function handleSubmit(event) {
+    event.preventDefault();
+    alert(city);
+  }
+
+  function handleCityChange(event) {
+    setCity(event.target.value);
+  }
+
+
+
+
+
     return(
       <div className="Weather">
           <div className="card">
               <div className="row">
                   <div className="col">
-                  <form className="input-city">
+                  <form className="input-city" onSubmit={handleSubmit}>
                       <div className="row mt-3">
                           <div className="col-1"></div>
                           <div className="col-8">
                               <div className="mb-3">
-                                  <input type="text" className="form-control" id="city-name-input" placeholder="Enter a city..." />
+                                  <input type="text" className="form-control" id="city-name-input" placeholder="Enter a city..." onChange={handleCityChange} />
                               </div>
                           </div>
                           <div className="col-3">
@@ -47,7 +61,7 @@ if (weatherData.ready) {
 
 } else {
   const apiKey = "ca47e9200d90350ad07692b8ce034ca3";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=imperial`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
   axios.get(`${apiUrl}`).then(handleResponse);
 
   return "Loading..."
