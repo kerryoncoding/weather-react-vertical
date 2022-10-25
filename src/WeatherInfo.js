@@ -1,5 +1,7 @@
 import React from "react";
 import WeatherTemperature from "./WeatherTemperature";
+import WeatherForecast from "./WeatherForecast";
+
 import FormatDate from "./FormatDate";
 
 export default function WeatherInfo(props) {
@@ -33,29 +35,8 @@ export default function WeatherInfo(props) {
                     </ul>
                   </div>
                 </div>
-                <div className="col-6 flex rightSide">
-                  <div className="row">
-                    <div id="forecast">
-                      <div className="row card-future">
-                        <div className="col-4 day-future">Wed</div>
-                        <div className="col-4">
-                          <img
-                            src="http://openweathermap.org/img/wn/10d@2x.png"
-                            alt="weather-icon"
-                            className="icon-future"
-                          />
-                        </div>
-                        <div className="col-4 temperature-future">
-                          <span className="high-future">56° </span><span className="low-future">| 34°</span>                
-                        </div>
-                      </div>       
-                    </div>
-                  </div>
-                </div>
+                 <WeatherForecast />
               </div>
-
-
-
         </div>
     );
 }
