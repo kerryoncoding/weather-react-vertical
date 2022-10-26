@@ -58,6 +58,9 @@
     margin-left: 5px;
 }
 
+.Weather .units a {
+    text-decoration: none;
+}
 
 .Weather .time-current {
     padding-bottom: 35px;
