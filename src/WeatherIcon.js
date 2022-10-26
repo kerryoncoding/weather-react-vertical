@@ -5,7 +5,7 @@ export default function WeatherIcon(props) {
     return (
         <div> 
             <img src={iconCode}
-            alt="weather-icon"
+            alt="future-weather-icon"
             className="icon-future"/>
         </div>
     );
