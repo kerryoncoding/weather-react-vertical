@@ -8,9 +8,9 @@ import "./Weather.css";
 export default function Weather(props){
   const [weatherData, setweatherData] = useState({ready:false });
   const [city, setCity] = useState(props.defaultCity);
+
   function handleResponse(response){
-    console.log(response.data);
-    setweatherData({
+      setweatherData({
       ready: true,
       coord: response.data.coord,
       city: response.data.name,
@@ -76,7 +76,7 @@ if (weatherData.ready) {
 
 } else {
   search();
-  return "Loading..."
+  return "Loading...";
 }
 
      

@@ -6,18 +6,27 @@ import WeatherForecastCard from "./WeatherForecastCard";
 export default function WeatherForecast(props){
     let [loaded, setLoaded] = useState(false);
     let [forecast, setForecastData] = useState(null);
-      function handleResponse(response){
+
+    function handleResponse(response){
+        console.log(response.data);
         setForecastData(response.data.daily);
         setLoaded(true);
     }
     
     if (loaded) {
     return (
-        <div className="WeatherForcast">
-            <div id="forecast">
-                <WeatherForecastCard forecast={forecast[0]} />
-                      
-            </div>
+        <div className="WeatherForcast">    
+            {forecast.map(function (dailyForcast, index){
+                if (index < 5){
+                return(
+                    <div id="forecast" key={index}>
+                        <WeatherForecastCard data={dailyForcast} />                
+                    </div>
+                );
+                } else {
+                    return null;
+                } 
+            })}            
         </div>        
     );
 
